@@ -2,8 +2,6 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from usuarios.api.viewsets import UsuariosViewSet
-from django.conf.urls.static import static
-from django.conf import settings
 from rest_framework.authtoken import views
 from usuarios.views import UserCreateAPIView
 
