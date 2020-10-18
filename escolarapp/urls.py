@@ -12,6 +12,6 @@ router.register(r'usuarios', UsuariosViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('account/login', views.obtain_auth_token),
-    path('account/register', UserCreateAPIView.as_view()),
+    path('account/', include('rest_auth.urls')),
+    path('account/register/', UserCreateAPIView.as_view()),
 ]
