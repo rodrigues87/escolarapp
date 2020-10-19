@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from usuarios.api.viewsets import UsuariosViewSet
+from usuarios.api.viewsets import UsuariosViewSet, CurrentUserView
 from rest_framework.authtoken import views
 
 from usuarios.views import UserCreateAPIView
@@ -14,4 +14,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('account/', include('rest_auth.urls')),
     path('account/register/', UserCreateAPIView.as_view()),
+    path('account/user/', CurrentUserView),
+
+
 ]
