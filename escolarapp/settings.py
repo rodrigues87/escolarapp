@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'usuarios',
+    'evento',
 
 ]
+
+DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
+
 
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_REQUIRED = True
@@ -126,6 +130,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 REST_FRAMEWORK = {
+    'DATE_FORMAT': "%m/%d/%Y",
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DEFAULT_PERMISSION_CLASSES': (
