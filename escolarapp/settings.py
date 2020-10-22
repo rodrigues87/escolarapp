@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'usuarios',
     'evento',
+    'agendamento',
 
 ]
 
