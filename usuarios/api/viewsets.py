@@ -9,7 +9,7 @@ class UsuariosViewSet(ModelViewSet):
 
     queryset = User.objects.all()
     serializer_class = UsuariosSerializer
-    filter_fields = ('email',)
+    filter_fields = ('email','first_name',)
 
 
 class CurrentUserView(APIView):
