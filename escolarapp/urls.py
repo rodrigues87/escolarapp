@@ -5,6 +5,8 @@ from rest_framework import routers
 from agendamento.api.viewsets import AgendamentoViewSet
 from usuarios.api.viewsets import UsuariosViewSet, CurrentUserView
 from evento.api.viewsets import EventoViewSet, FavoritoViewSet
+from chamados.api.viewsets import ChamadoViewSet, ImpressoraViewSet
+
 
 from usuarios.views import UserCreateAPIView
 
@@ -13,6 +15,9 @@ router.register(r'usuarios', UsuariosViewSet)
 router.register(r'eventos', EventoViewSet)
 router.register(r'favoritos', FavoritoViewSet)
 router.register(r'agendamentos', AgendamentoViewSet)
+router.register(r'chamados', ChamadoViewSet)
+router.register(r'impressoras', ImpressoraViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
