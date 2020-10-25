@@ -19,7 +19,7 @@ router.register(r'chamados', ChamadoViewSet)
 router.register(r'impressoras', ImpressoraViewSet)
 router.register(r'remedios', RemedioViewSet)
 
-#router.register(r'usuario', CurrentUser, basename="usuario")
+router.register(r'usuario', CurrentUser, basename="usuario")
 
 
 urlpatterns = [
