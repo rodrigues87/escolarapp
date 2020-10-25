@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'usuarios',
     'evento',
     'agendamento',
-    'chamados'
+    'chamados',
+    'remedio'
 
 ]
 

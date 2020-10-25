@@ -6,7 +6,7 @@ from agendamento.api.viewsets import AgendamentoViewSet
 from usuarios.api.viewsets import UsuariosViewSet, CurrentUser
 from evento.api.viewsets import EventoViewSet, FavoritoViewSet
 from chamados.api.viewsets import ChamadoViewSet, ImpressoraViewSet
-
+from remedio.api.viewsets import RemedioViewSet
 
 from usuarios.views import UserCreateAPIView
 
@@ -17,6 +17,8 @@ router.register(r'favoritos', FavoritoViewSet)
 router.register(r'agendamentos', AgendamentoViewSet)
 router.register(r'chamados', ChamadoViewSet)
 router.register(r'impressoras', ImpressoraViewSet)
+router.register(r'remedios', RemedioViewSet)
+
 #router.register(r'usuario', CurrentUser, basename="usuario")
 
 
