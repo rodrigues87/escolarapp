@@ -3,7 +3,7 @@ from django.urls import path, include
 from rest_framework import routers
 
 from agendamento.api.viewsets import AgendamentoViewSet
-from usuarios.api.viewsets import UsuariosViewSet, CurrentUserView
+from usuarios.api.viewsets import UsuariosViewSet, CurrentUser
 from evento.api.viewsets import EventoViewSet, FavoritoViewSet
 from chamados.api.viewsets import ChamadoViewSet, ImpressoraViewSet
 
@@ -17,6 +17,7 @@ router.register(r'favoritos', FavoritoViewSet)
 router.register(r'agendamentos', AgendamentoViewSet)
 router.register(r'chamados', ChamadoViewSet)
 router.register(r'impressoras', ImpressoraViewSet)
+#router.register(r'usuario', CurrentUser, basename="usuario")
 
 
 urlpatterns = [
@@ -24,6 +25,5 @@ urlpatterns = [
     path('', include(router.urls)),
     path('account/', include('rest_auth.urls')),
     path('account/register/', UserCreateAPIView.as_view()),
-    path('account/user/', CurrentUserView),
 
 ]
