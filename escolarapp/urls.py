@@ -11,7 +11,6 @@ from remedio.api.viewsets import RemedioViewSet
 from usuarios.views import UserCreateAPIView
 
 router = routers.DefaultRouter()
-router.register(r'usuarios', UsuariosViewSet)
 router.register(r'eventos', EventoViewSet)
 router.register(r'favoritos', FavoritoViewSet)
 router.register(r'agendamentos', AgendamentoViewSet)
