@@ -13,6 +13,7 @@ class UsuariosViewSet(ModelViewSet):
     def get_queryset(self):
         return User.objects.filter(email=self.request.user.email)
 
+
 @permission_classes([IsAdminUser])
 class UsuariosAdmin(ModelViewSet):
     queryset = User.objects.all()
