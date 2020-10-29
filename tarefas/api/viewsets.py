@@ -3,6 +3,6 @@ from tarefas.api.serializers import TarefasSerializer
 from tarefas.models import Tarefa
 
 
-class TarefeViewSet(ModelViewSet):
+class TarefaViewSet(ModelViewSet):
     queryset = Tarefa.objects.all()
     serializer_class = TarefasSerializer

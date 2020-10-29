@@ -3,11 +3,11 @@ from django.urls import path, include
 from rest_framework import routers
 
 from agendamento.api.viewsets import AgendamentoViewSet
-from usuarios.api.viewsets import  UsuariosAdmin
+from usuarios.api.viewsets import UsuariosAdmin
 from evento.api.viewsets import EventoViewSet, FavoritoViewSet
 from chamados.api.viewsets import ChamadoViewSet, ImpressoraViewSet
-from remedio.api.viewsets import RemedioViewSet
-from tarefas.api.viewsets import TarefeViewSet
+from remedio.api.viewsets import RemedioViewSet, RecomendacaoViewSet
+from tarefas.api.viewsets import TarefaViewSet
 
 from usuarios.views import UserCreateAPIView
 
@@ -18,9 +18,9 @@ router.register(r'eventos', EventoViewSet)
 router.register(r'favoritos', FavoritoViewSet)
 router.register(r'impressoras', ImpressoraViewSet)
 router.register(r'lista-usuarios', UsuariosAdmin)
+router.register(r'recomendacoes', RecomendacaoViewSet)
 router.register(r'remedios', RemedioViewSet)
-router.register(r'tarefas', TarefeViewSet)
-
+router.register(r'tarefas', TarefaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
