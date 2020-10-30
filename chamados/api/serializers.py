@@ -7,6 +7,7 @@ class ChamadoSerializer(ModelSerializer):
     class Meta:
         model = Chamado
         fields = '__all__'
+        depth = 1
 
 
 class ImpressoraSerializer(ModelSerializer):
