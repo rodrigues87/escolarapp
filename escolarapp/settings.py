@@ -45,8 +45,7 @@ INSTALLED_APPS = [
 
 ]
 
-DATE_INPUT_FORMATS = ('%d-%m-%Y','%Y-%m-%d')
-
+DATE_INPUT_FORMATS = ('%d-%m-%Y', '%Y-%m-%d')
 
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_EMAIL_REQUIRED = True
@@ -136,8 +135,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 REST_FRAMEWORK = {
     'DATE_FORMAT': "%d/%m/%Y",
     "DATE_INPUT_FORMATS": ["%d/%m/%Y"],
-    #'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    #'PAGE_SIZE': 10,
+
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # 'PAGE_SIZE': 10,
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'

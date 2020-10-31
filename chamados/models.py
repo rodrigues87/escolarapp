@@ -12,8 +12,8 @@ class Impressora(models.Model):
     )
     status_impressora = models.CharField(max_length=1, choices=STATUS_CHOICES)
 
-    def __int__(self):
-        return self.id
+    def __str__(self):
+        return str(self.id)
 
     class Meta:
         verbose_name_plural = "Impressoras"
@@ -26,8 +26,8 @@ class Chamado(models.Model):
     dataAbertura = models.DateField(auto_now_add=True, blank=True)
     horarioAbertura = models.TimeField(auto_now_add=True, blank=True)
 
-    def __int__(self):
-        return self.id
+    def __str__(self):
+        return str(self.id)
 
     class Meta:
         verbose_name_plural = "Chamados"
