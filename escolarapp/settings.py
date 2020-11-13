@@ -133,6 +133,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 REST_FRAMEWORK = {
+    'TIME_FORMAT': "%H:%M:%S",
     'DATE_FORMAT': "%d/%m/%Y",
     "DATE_INPUT_FORMATS": ["%d/%m/%Y"],
 

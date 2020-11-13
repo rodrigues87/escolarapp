@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from agendamento.api.viewsets import AgendamentoViewSet
+from agendamento.api.viewsets import AgendamentoViewSet, MeusAgendamentoViewSet
 from usuarios.api.viewsets import UsuariosAdmin
 from evento.api.viewsets import EventoViewSet, FavoritoViewSet
 from chamados.api.viewsets import ChamadoViewSet, ImpressoraViewSet
@@ -13,6 +13,7 @@ from usuarios.views import UserCreateAPIView
 
 router = routers.DefaultRouter()
 router.register(r'agendamentos', AgendamentoViewSet)
+router.register(r'meus-agendamentos', MeusAgendamentoViewSet, basename="meus-agendamentos")
 router.register(r'chamados', ChamadoViewSet)
 router.register(r'eventos', EventoViewSet)
 router.register(r'favoritos', FavoritoViewSet)
