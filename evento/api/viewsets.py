@@ -11,3 +11,6 @@ class EventoViewSet(ModelViewSet):
 class FavoritoViewSet(ModelViewSet):
     queryset = Favorito.objects.all()
     serializer_class = FavoritosSerializer
+
+    def get_queryset(self):
+        return Favorito.objects.filter(usuario=self.request.user)
