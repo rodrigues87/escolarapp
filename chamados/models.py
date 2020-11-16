@@ -4,6 +4,7 @@ from usuarios.models import User
 
 
 class Impressora(models.Model):
+    nome = models.CharField(max_length=40)
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     STATUS_CHOICES = (
         ("F", "FUNCIONANDO"),
@@ -25,6 +26,11 @@ class Chamado(models.Model):
     impressora = models.ForeignKey(Impressora, on_delete=models.CASCADE)
     dataAbertura = models.DateField(auto_now_add=True, blank=True)
     horarioAbertura = models.TimeField(auto_now_add=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        self.impressora.status_impressora = "D"
+        self.impressora.save()
+        super(Chamado, self).save(*args, **kwargs)
 
     def __str__(self):
         return str(self.id)

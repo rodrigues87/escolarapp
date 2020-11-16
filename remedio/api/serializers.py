@@ -15,4 +15,4 @@ class RecomendacaoSerializer(ModelSerializer):
     class Meta:
         model = Recomendacao
         fields = 'id','qnt_comprimidos','intervalo','horario_inicial','dose','remedio'
-        depth = 1
+

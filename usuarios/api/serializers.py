@@ -1,5 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from usuarios.models import User
+from django.contrib.auth.models import Group
 
 
 class UsuariosSerializer(ModelSerializer):
@@ -12,5 +13,8 @@ class UsuariosSerializer(ModelSerializer):
         password = validated_data.pop('password')
         user = User(**validated_data)
         user.set_password(password)
+        user.save()
+        grupo = Group.objects.get(name='usuarios')
+        user.groups.add(grupo)
         user.save()
         return user
