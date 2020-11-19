@@ -9,6 +9,7 @@ class Agendamento(models.Model):
     horainicio = models.TimeField()
     horafinal = models.TimeField()
     usuario = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True)
+    teste = models.DateTimeField(blank=True,null=True)
 
     def __str__(self):
         return self.nome_agendamento
