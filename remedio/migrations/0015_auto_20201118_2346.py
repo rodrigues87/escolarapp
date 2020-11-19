@@ -25,9 +25,4 @@ class Migration(migrations.Migration):
             name='quantidade_total_comprimidos',
             field=models.IntegerField(blank=True, null=True),
         ),
-        migrations.AlterField(
-            model_name='recomendacao',
-            name='ultima_hora_que_tomou',
-            field=models.DateTimeField(blank=True, null=True),
-        ),
     ]
