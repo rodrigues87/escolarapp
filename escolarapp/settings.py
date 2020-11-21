@@ -131,6 +131,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 REST_FRAMEWORK = {
     'TIME_FORMAT': "%H:%M:%S",
     'DATE_FORMAT': "%d/%m/%Y",
+    'DATETIME_FORMAT': "%H:%M:%S",
     "DATE_INPUT_FORMATS": ["%d/%m/%Y"],
 
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
