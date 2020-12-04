@@ -8,6 +8,7 @@ from evento.api.viewsets import EventoViewSet, FavoritoViewSet
 from chamados.api.viewsets import ChamadoViewSet, ImpressoraViewSet
 from remedio.api.viewsets import RemedioViewSet, RecomendacaoViewSet
 from tarefas.api.viewsets import TarefaViewSet
+from pokemon.api.viewsets import PokemonViewSet
 
 from usuarios.views import UserCreateAPIView
 
@@ -22,6 +23,7 @@ router.register(r'lista-usuarios', UsuariosAdmin)
 router.register(r'recomendacoes', RecomendacaoViewSet)
 router.register(r'remedios', RemedioViewSet)
 router.register(r'tarefas', TarefaViewSet)
+router.register(r'pokemons', PokemonViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

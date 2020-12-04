@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'agendamento',
     'chamados',
     'remedio',
-    'tarefas'
+    'tarefas',
+    'pokemon'
 
 ]
 
